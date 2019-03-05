@@ -1,0 +1,7 @@
+mvnw install dockerfile:build
+
+docker run -p8080:8080 tszala/consumerhistory
+
+docker run -p5432:5432 -e POSTGRES_PASSWORD=postgres_password postgres
+
+http://localhost:8080/swagger-ui.html
